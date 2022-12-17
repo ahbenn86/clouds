@@ -2,7 +2,7 @@
 ### Weather application to display your current weather conditions.  
 <br/>
 
-<img src="./images/cloud-favicon.png" alt="clouds-icon">
+<img src="./images/cloud-logo.png" alt="clouds-icon">
 
 > Currently under development 
 

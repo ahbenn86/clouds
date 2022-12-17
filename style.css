@@ -1,18 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
 body {
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(101, 166, 235, 0.67);
+}
+
+.clouds-background {
     height: 100vh;
-    overflow: hidden;
+    width: 100vw;
+    background-image: linear-gradient(
+        to right,
+        rgba(121, 145, 187, 0.6),
+        rgba(174, 201, 248, 0.6),
+        rgba(148, 186, 252, 0.6)
+      ),
+      url(./images/cloud-logo.png), url(./images/clouds-background.png);
+      background-repeat: no-repeat;
+      background-position: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .clouds-background {
+        background-image: linear-gradient(
+        to right,
+        rgba(121, 145, 187, 0.6),
+        rgba(174, 201, 248, 0.6),
+        rgba(148, 186, 252, 0.6)
+      )
+    }
 }
