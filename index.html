@@ -6,31 +6,85 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
-  <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    /> -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/cloud-favicon-32.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="./images/cloud-favicon-16.ico">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
-    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js">
-  <link rel="stylesheet" href="https://use.typekit.net/uwe4jcq.css">
+  <link rel="stylesheet" href="https://cdn.usebootstrap.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <title>Clouds</title>
 </head>
 
 <body>
   <div class="clouds-background">
-    <div class="container" id="clouds-main">
-      <table class="table">
-        <thead>
-          <th>CLOUDS</th>
-          
-      </table>
-    </div>
+    <div class="d-flex flex-column h-100">
+      <div id="clouds-main" class="container">
+        <div class="row">
+          <div id="clouds-title" class="col text-center">
+            <img src="./images/clouds-banner.png" alt="clouds title banner">
+          </div>
+        </div>
+        <div class="row"> 
+          <div class="col" id="clouds-current">
+            <div class="row">
+              <div class="col-sm" id="clouds-temp">
+                <div class="row col d-md-inline-block" id="location">
+                  New York, NY
+                </div>
+                <div class="row col d-md-inline-block" id="dayTime">Tuesday, 12:00PM</div>
+                <div class="row col d-md-inline-block" id="summary">Mostly Sunny</div>
+                <div class="row col d-md-inline-block" id="currentTemp">36&deg;</div>
+              </div>
+              <div class="col-sm">
+                <img src="./images/mostly-sunny.png" alt="" class="img-fluid" id="weatherIcon">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md" id="clouds-conditions">
+                <div class="row">
+                  <div class="col-md conditions-text" id="percipitation">Percipitation 20%</div>
+                </div>
+                <div class="row">
+                  <div class="col-md conditions-text" id="humidity">Humidity 95%</div>
+                </div>
+                <div class="row">
+                  <div class="col-md conditions-text" id="wind">Wind 14mph</div>
+                </div>
+              </div> 
+              <div class="col-md" id="clouds-forecast">
+                <!--Nav tabs-->
+                <ul class="nav nav-tabs" id="forecastTab">
+                  <li class="nav-item">
+                    <a href="#weekly" data-toggle="tab" class="nav-link">Hourly</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#daily" data-toggle="tab" class="nav-link active">Weekly</a>
+                  </li>
+                </ul>
+
+                <!--Tab panes-->
+                <div class="tab-content">
+                  <div class="tab-pane container active" id="daily">
+                    <table id="dailyForecast" width="100%"></table>
+                  </div>
+                  <div class="tab-pane container fade" id="weekly">
+                    <table id="weeklyForecast" width="100%"></table>
+                  </div>
+                </div>
+              </div> 
+            </div>
+            <div class="row">
+               <div class="col text-center" id="clouds-footer">
+                <div class="row">
+                  <div class="col">
+                    <a href="https://darksky.net/poweredby/" target="_blank">Powered by Dark Sky</a>
+                  </div>
+                  <div class="col">
+                    <a href="https://angelobennett.com" target="_blank">Developed by Angelo Bennett</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <script src="script.js"></script>
